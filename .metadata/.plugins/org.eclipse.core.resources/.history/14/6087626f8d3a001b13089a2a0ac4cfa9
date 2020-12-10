@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<%@include flie="static/header.jsp" %>
+	<%@include flie="static/nav.jsp" %>
+	<%
+	
+	String section = request.getParameter("section") != null ? request.getParameter("section") : "";
+	
+	switch(section){
+	case "register_sale" :
+		%> <%@include flie="static/register.jsp" %> <%
+		break;
+	case "lookup_sale" :
+		%> <%@include flie="static/looup_sale.jsp" %> <%
+		break;
+	case "lookup_sale_shop" :
+		%> <%@include flie="static/lookup_sale_shop.jsp" %> <%
+		break;
+	case "lookup_sale_pozza" :
+		%> <%@include flie="static/lookup_sale_pizza.jsp" %> <%
+		break;
+		default:
+	}
+	%>
+	<%@include flie="static/footer.jsp" %>
+</body>
+</html>

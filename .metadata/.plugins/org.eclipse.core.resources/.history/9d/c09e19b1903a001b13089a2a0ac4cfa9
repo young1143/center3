@@ -1,0 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<header>
+	<h3>통합매출조회</h3>
+</header>

@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<header>
+	<h3>통합매출조회</h3>
+	
+	<%
+        try {
+            Class.forName("oracle.jdbc.OracleDriver");
+            Connection conn = DriverManager.getConnection
+                                ("jdbc:oracle:thin:@//localhost:1521/xe", "order_admin", "order_password");
+            
+            if (conn != null) {
+                System.out.println("Database Connected!");
+            }
+            else {
+                System.out.println("Database Connect Fail!");
+            }
+
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT SYSTEM, 10 FROM DUAL");
+
+            while (rs.next()) {
+                System.out.println("Today date : " + rs.getString(1) + " And " + rs.getInt(2));
+            }
+
+            stmt.close();
+            conn.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    %>
+	
+</header>

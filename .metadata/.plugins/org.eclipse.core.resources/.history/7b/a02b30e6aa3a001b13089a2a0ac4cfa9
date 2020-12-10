@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<% 
+
+String saleno = requset.getParameter("saleno");
+String saleno = requset.getParameter("saleno");
+String saleno = requset.getParameter("saleno");
+String saleno = requset.getParameter("saleno");
+String saleno = requset.getParameter("saleno");
+String saleno = requset.getParameter("saleno");
+%>
